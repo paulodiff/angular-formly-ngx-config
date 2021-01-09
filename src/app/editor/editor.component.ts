@@ -33,15 +33,20 @@ export class EditorComponent implements OnInit, OnDestroy {
     form1 = new FormGroup({});
     options1: FormlyFormOptions = {};
     fields1: FormlyFieldConfig[] = [{
-      key: 'email',
-      type: 'input',
+      key: 'marvel1',
+      type: 'select',
       templateOptions: {
-        label: 'Email address',
-        placeholder: 'Enter email',
-        required: true,
-      }
+        label: 'Normal Select',
+        options: [
+          {label: 'Iron Man', value: 'iron_man'},
+          {label: 'Captain America', value: 'captain_america'},
+          {label: 'Black Widow', value: 'black_widow'},
+          {label: 'Hulk', value: 'hulk'},
+          {label: 'Captain Marvel', value: 'captain_marvel'},
+        ],
+      },
     }];
-    model1: { email: 'email@gmail.com' };
+    model1: { };
 
 
   constructor(
@@ -177,8 +182,8 @@ export class EditorComponent implements OnInit, OnDestroy {
   }
 
 
-  addField2Form(model) {
-    console.log('addField2Form:', model);
+  addField2Form() {
+    console.log('addField2Form:', this.model1);
   }
 
 
