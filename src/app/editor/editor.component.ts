@@ -33,20 +33,22 @@ export class EditorComponent implements OnInit, OnDestroy {
     form1 = new FormGroup({});
     options1: FormlyFormOptions = {};
     fields1: FormlyFieldConfig[] = [{
-      key: 'marvel1',
+      key: 'candy',
       type: 'select',
+      // defaultValue: 'milky_way',
       templateOptions: {
-        label: 'Normal Select',
+        label: 'Item type',
         options: [
-          {label: 'Iron Man', value: 'iron_man'},
-          {label: 'Captain America', value: 'captain_america'},
-          {label: 'Black Widow', value: 'black_widow'},
-          {label: 'Hulk', value: 'hulk'},
-          {label: 'Captain Marvel', value: 'captain_marvel'},
+          { label: 'infoHeader', value: 'infoHeader' },
+          { label: 'infoSimple', value: 'infoSimple' },
+          { label: 'input', value: 'input' },
         ],
       },
     }];
-    model1: { };
+
+    model1 = {
+      // candy: 'milky_way',
+    };
 
 
   constructor(
@@ -184,6 +186,8 @@ export class EditorComponent implements OnInit, OnDestroy {
 
   addField2Form() {
     console.log('addField2Form:', this.model1);
+    console.log('addField2Form:', this.form1);
+    console.log('addField2Form:', this.options1);
   }
 
 
