@@ -1,0 +1,71 @@
+<app-my-loader></app-my-loader>
+<a [routerLink]="'/'">info</a>-<a [routerLink]="'/main'">main</a>-<a [routerLink]="'/json/date'">date</a>-<a [routerLink]="'/json/user'">user</a>-
+<a [routerLink]="'/json/cf'">codice fiscale</a>-
+<a [routerLink]="'/json/cap'">CAP</a>-
+<a [routerLink]="'/json/iban'">iban</a>-
+<a [routerLink]="'/json/euro'">euro</a>-
+<a [routerLink]="'/json/radio'">radio</a> -
+<a [routerLink]="'/json/checkbox'">checkbox</a> -
+<a [routerLink]="'/json/email'">email</a> -
+<a [routerLink]="'/json/select'">select</a> -
+<a [routerLink]="'/json/select-async'">select-async</a> -
+<a [routerLink]="'/json/counter'">counter</a> -
+<a [routerLink]="'/json/upload'">upload</a> -
+<a [routerLink]="'/json/html-template'">html-template</a> -
+<a [routerLink]="'/json/svgcaptcha'">svgcaptcha</a> -
+<a [routerLink]="'/json/authinfo'">authinfo</a> -
+<a [routerLink]="'/json/repeat'">repeat</a> -
+<a [routerLink]="'/json/void'">void</a> -
+<a [routerLink]="'/tabulator'">tabulator</a> -
+<a [routerLink]="'/json/dinpi01'">dinpi01</a> -
+<a [routerLink]="'/editor/infoHeader'">EDIT:infoHeader</a> -
+<a [routerLink]="'/schema'">schema</a> - 
+<a [routerLink]="'/login'">login</a> - 
+<router-outlet></router-outlet>
+<h3>TODO</h3>
+<b>fare un service che a seconda del template options carica i dati in una select nel costruttore del JSON FORM e chiama una url</b>
+<p>Select e sub select da dati in options</p>
+<p>Select async con service api unico per Select</p>
+<p>Bootstrap Design kit</p>
+
+<h3>Json powered</h3>
+<h4>Validator</h4>
+<ul>
+  <li>Validator semplici con espressione regolare</li>
+  <li>Validator con funzione che legge i parametri da templateOptions</li>
+  <li>Validator che lega altri parametri</li>
+  <li>Validator fra due o più select</li>
+  <li>Validator remoti</li>
+</ul>
+<h4>Hide Show - hideExpression</h4>
+<ul>
+  <li>Sub Select</li>
+  
+</ul>
+<h4>Valori calcolati - ExpressionProperties</h4>
+<ul>
+  <li>Sub Select</li>
+  <li>Campi calolati o valori dipendenti da altri</li>
+</ul>
+
+<h4>Riferimenti</h4>
+<ul>
+   <li>Json powered cascade select https://github.com/ngx-formly/ngx-formly/pull/1280/files</li>
+  <li>Json Schema Trasnformer extra: https://stackblitz.com/edit/angular-bwt5jb?file=src%2Fapp%2Fapp.module.ts</li>
+  <li>Json Powered repeat section https://stackblitz.com/edit/angular-oqnqnw-o43ifu?file=src%2Fassets%2Fjson-powered%2Fuser.json</li>
+</ul>
+
+
+
+
+<!--
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button">Submit</button>
+</form>
+-->
+
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->

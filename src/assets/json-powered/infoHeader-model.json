@@ -1,0 +1,16 @@
+{
+  "infoHeader01": {
+    "templateOptions": {
+      "description": "d_escription_",
+      "label": "l_abel",
+      "required": "r_equired"
+    },
+    "key": "infoHeader01",
+    "type": "infoHeader"
+  },
+  "infoHeader02": {
+    "templateOptions": {},
+    "type": "infoHeader",
+    "key": "infoHeader02"
+  }
+}

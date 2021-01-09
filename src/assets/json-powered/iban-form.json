@@ -1,0 +1,14 @@
+[
+    {
+      "key": "iban",
+      "type": "input",
+      "templateOptions": {
+        "label": "iban"
+      }
+      ,
+      "validators": {
+        "validation": ["ibanValidator"]
+      }
+    }
+    
+]

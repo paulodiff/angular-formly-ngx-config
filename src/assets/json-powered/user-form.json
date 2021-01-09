@@ -1,0 +1,64 @@
+[
+    {
+      "key": "f1",
+      "type": "input",
+      "templateOptions": {
+        "label": "f1 - minMaxValidator [2,100]",
+        "minValue" : 2,
+        "maxValue" : 100,
+        "sumExpr" : {
+          "listMemmber" : ["f1","f2"],
+          "destField" : "sumOfField"
+        }
+      },
+      "validators": {
+        "validation": ["minMax"]
+      }
+    },
+
+    {
+      "key": "f2",
+      "type": "input",
+      "templateOptions": {
+        "label": "f2",
+        "sumExpr" : {
+          "listMemmber" : ["f1","f2"],
+          "destField" : "sumOfField"
+        }
+      }
+    },
+
+    {
+      "key": "sumOfField",
+      "type": "input",
+      "templateOptions": {
+        "label": "sumOfField"
+    
+      }
+    },
+
+    {
+      "key": "mac",
+      "type": "input",
+      "hideExpression": "(model.f1=='11') || (model.f1=='22')",
+      "templateOptions": {
+        "label": "mac  (hide if f1=11 or f1=22)"
+      }
+    },
+
+    {
+      "key": "noTrailingSpaces",
+      "type": "input",
+      "templateOptions": {
+        "label": "no trailing or ending space AAND default control"
+      }
+      ,
+      "validators": {
+        "validation": [
+          "avoidStartingAndEndnigSpaceValidator",
+          "defaultUserInputValidator"
+          ]
+      }
+    }
+  ]
+  

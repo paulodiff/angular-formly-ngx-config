@@ -1,0 +1,35 @@
+[
+    {
+      "key": "d1",
+      "type": "input",
+      "templateOptions": {
+        "label": "date"
+      },
+       "validators": {
+        "validation": ["dateValidator"]
+      }
+    }
+    ,
+     {
+      "key": "d2",
+      "type": "input",
+      "templateOptions": {
+        "label": "date in range 07/01/2000 - 05/11/2000",
+        "fromDate" : "07/01/2000",
+        "toDate" : "05/11/2000"
+      },
+       "validators": {
+        "validation": ["dateValidator","dateInRangeValidator"]
+      }
+      
+    }
+    ,
+     {
+      "key": "d3",
+      "type": "input",
+      "templateOptions": {
+        "label": "date after d2 TODO VALIDATOR"
+      }
+    }
+  ]
+  

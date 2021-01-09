@@ -1,0 +1,41 @@
+[
+    {
+      "key": "radioInput",
+      "type": "rr-radio",
+      "templateOptions": {
+        "label": "lista di scelta",
+        "placeholder": "Placeholder",
+        "description": "Description",
+        "required": true,
+        "options": [
+          { "value": 1, "label": "Al 3ata," },
+          { "value": 2, "label": "Option 2" },
+          { "value": 3, "label": "Option 3" }
+        ]
+      }
+    },
+
+    {
+      "key": "f1",
+      "type": "rr-input",
+      "hideExpression": "(model.radioInput=='1')",
+      "templateOptions": {
+        "label": "option1 hide if radio 1"
+      }
+    },
+
+    {
+      "key": "radioInput2",
+      "type": "rr-radio",
+      "templateOptions": {
+        "label": "lista di scelta - con dati in options",
+        "placeholder": "Placeholder",
+        "description": "Description",
+        "required": true
+      },
+      "expressionProperties": {
+        "templateOptions.options": "formState.selectOptionsData.cities"
+      }
+    }
+    
+]

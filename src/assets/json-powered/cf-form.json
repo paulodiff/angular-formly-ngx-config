@@ -1,0 +1,16 @@
+[
+    {
+      "key": "cf",
+      "type": "input",
+      "templateOptions": {
+        "label": "codice fiscale label",
+        "description" : "codice fiscale description",
+        "required" : true,
+        "placeholder" : "segnaposto"
+      },
+       "validators": {
+        "validation": ["codiceFiscaleValidator"]
+      }
+    }
+    
+]

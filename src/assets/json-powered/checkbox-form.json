@@ -1,0 +1,29 @@
+[
+  
+
+
+
+   {
+    "key": "CheckboxTerms3",
+    "type": "rr-checkbox",
+    "templateOptions": {
+      "label": "Accept terms 3 ",
+      "description": "Itali3apt terms",
+      "required": true
+    }
+     ,
+       "validators": {
+        "validation": ["checkboxValidator"]
+      }
+    
+  },
+
+   {
+      "key": "iban",
+      "type": "input",
+      "templateOptions": {
+        "label": "iban"
+      }
+    }
+
+]
