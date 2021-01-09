@@ -29,6 +29,21 @@ export class EditorComponent implements OnInit, OnDestroy {
     uploadResponse = { status: '', message: '', filePath: '' };
     securityToken = '';
 
+    //  form select ations .. inline
+    form1 = new FormGroup({});
+    options1: FormlyFormOptions = {};
+    fields1: FormlyFieldConfig[] = [{
+      key: 'email',
+      type: 'input',
+      templateOptions: {
+        label: 'Email address',
+        placeholder: 'Enter email',
+        required: true,
+      }
+    }];
+    model1: { email: 'email@gmail.com' };
+
+
   constructor(
               private route: ActivatedRoute,
               private _appService: AppService
@@ -161,6 +176,12 @@ export class EditorComponent implements OnInit, OnDestroy {
     console.log('remoteItem',o);
   }
 
+
+  addField2Form(model) {
+    console.log('addField2Form:', model);
+  }
+
+
   hmac() {
 
     let currentModel = this.model;
@@ -212,7 +233,6 @@ addItemAsync() {
           ...this.fields,
           cfgField
         ];
-
         
         this.model[cfgField.key] = {};
         this.model[cfgField.key].key = cfgField.key;

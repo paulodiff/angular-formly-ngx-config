@@ -11,17 +11,21 @@ import { FieldWrapper } from '@ngx-formly/core';
 
 
   <small>[formly-wrapper-form-field-cfg-all]</small>
-  {{key}} <button (click)="removeItem(key)"
+  {{key}} <button type="button" (click)="removeItem(key)"
 class="btn btn-primary submit-button">Remove</button>
   <ng-template #fieldComponent></ng-template>
-
   
 </div>
-
 
 `
 })
 export class FormlyWrapperFormFieldCfgAll extends FieldWrapper {
+
   @ViewChild('fieldComponent', { read: ViewContainerRef }) fieldComponent: ViewContainerRef;
+
+   removeItem(o: any) {
+     console.log('FormlyWrapperFormFieldCfgAll:removeItem',o);
+    // this.propagateChange(this.counterValue);
+  }
 }
 

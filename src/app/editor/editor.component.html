@@ -2,20 +2,31 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
   <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
  
-  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">SubmitIfValid</button>
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit If Valid</button>
 
-    <button type="submit" class="btn btn-primary submit-button">SubmitAlways</button>
+    <button type="submit" class="btn btn-primary submit-button">Submit Always</button>
 </form>
 
-
+<div class="btn-group" role="group" aria-label="Basic example">
 
 <button 
 (click)="addItem2Form()"
-class="btn btn-primary submit-button">add item 2 form</button>
+class="btn btn-primary submit-button">+ item 2</button>
 
 <button 
 (click)="addItemAsync()"
-class="btn btn-primary submit-button">add item async</button>
+class="btn btn-primary submit-button">+ async</button>
+
+</div>
+
+
+<form [formGroup]="form1" (ngSubmit)="addField2Form()">
+  <formly-form [model]="model1" [fields]="fields1" [options]="options1" [form]="form1"></formly-form>
+ 
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form1.valid">Add Field - valid</button>
+
+    <button type="submit" class="btn btn-primary submit-button">Add Field</button>
+</form>
 
 
 
