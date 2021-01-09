@@ -33,7 +33,7 @@ export class EditorComponent implements OnInit, OnDestroy {
     form1 = new FormGroup({});
     options1: FormlyFormOptions = {};
     fields1: FormlyFieldConfig[] = [{
-      key: 'candy',
+      key: 'type2add',
       type: 'select',
       // defaultValue: 'milky_way',
       templateOptions: {
@@ -185,48 +185,19 @@ export class EditorComponent implements OnInit, OnDestroy {
 
 
   addField2Form() {
-    console.log('addField2Form:', this.model1);
-    console.log('addField2Form:', this.form1);
-    console.log('addField2Form:', this.options1);
+    console.log('addField2Form:', this.model1.type2add);
+    this.addItemAsync(this.model1.type2add);
+    // console.log('addField2Form:', this.form1);
+    // console.log('addField2Form:', this.options1);
   }
 
 
-  hmac() {
-
-    let currentModel = this.model;
-    let hmac_key = this.securityToken ? this.securityToken : '12345678';
-    console.log('hmac key:', hmac_key);
-
-    var hash = sha256.hmac.create(hmac_key);
-    
-    Object.keys(currentModel).forEach((key, index) => {
-      //console.log(key, 
  
-      if ( currentModel[key] instanceof File ) {
-        console.log('hash add', key, currentModel[key].file_hash);
-        hash.update(currentModel[key].file_hash);
-      } 
 
-      if (typeof currentModel[key] === 'string') {
-        // formData.append(key, this.model[key]);  
-        console.log('hash add', key, currentModel[key]);
-        hash.update(currentModel[key]);
-      }
-              
-       if (typeof currentModel[key] === 'boolean') {
-        // formData.append(key, this.model[key]);  
-        console.log('hash add', key, currentModel[key]);
-        hash.update(currentModel[key].toString());
-      }
-
-    });
-
-    console.log('hmac:', hash.hex());
-  }
-
-addItemAsync() {
-  console.log('addItemAsync');
-  let cfgType = 'infoHeader';
+addItemAsync(v) {
+  console.log('addItemAsync:', v);
+  // let cfgType = 'infoHeader';
+  let cfgType = v;
   console.log('addItemAsync', cfgType);
   this._appService.getCfg(cfgType).subscribe((cfgField) => {
         console.log('returned data ... building form ... ');
