@@ -22,8 +22,8 @@ export class EditorComponent implements OnInit, OnDestroy {
     private sub: any;
     form = new FormGroup({});
     options: FormlyFormOptions = {};
-    fields: FormlyFieldConfig[];
-    model;
+    fields: FormlyFieldConfig[] = [];
+    model = {};
     error: string;
     userId: number = 1;
     uploadResponse = { status: '', message: '', filePath: '' };
@@ -37,12 +37,11 @@ export class EditorComponent implements OnInit, OnDestroy {
       type: 'select',
       // defaultValue: 'milky_way',
       templateOptions: {
-        label: 'Item type',
+        label: 'Add dynamically field to form:',
         options: [
           { label: 'infoHeader', value: 'infoHeader' },
-          { label: 'infoSimple', value: 'infoSimple' },
-          { label: 'infoList', value: 'infoList' },
-          { label: 'input', value: 'input' },
+
+          { label: 'infoList', value: 'infoList' }
         ],
       },
     }];
@@ -63,10 +62,11 @@ export class EditorComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-
+    /*
     this.sub = this.route.params.subscribe(params => {
       console.log('Json:ngOnInit');
       // this.itemId = +params['id']; // (+) converts string 'id' to a number
+      
       this.itemId = params['itemId'];
       console.log('Json:itemId', this.itemId);
       // In a real app: dispatch action to load the details here.
@@ -117,9 +117,10 @@ export class EditorComponent implements OnInit, OnDestroy {
       () => console.log('json:form:builded!')
       );
     });
+    
 
    
-    
+    */
   } // ngOnInit - end
 
   nameVal(field)  {
@@ -155,13 +156,7 @@ export class EditorComponent implements OnInit, OnDestroy {
     console.log('nameChange', field.templateOptions);
     console.log('nameChange', field.parent.formControl.controls["mac"].setValue("ss"));
     console.log(field.parent.form);
-    // field.parent.formControl // will return FormGroup
-    // field.parent.form // will return FormArray
-    //  to access to the FormArray from the child FormGroup knowing which // index in the array has the child FormGroup assigned?
 
-    //field.parent.form.at(field.parent.key) // which will return the same result as `field.parent.formControl`
-    // field.model.lastName="";
-    // console.log(field.model);
   }
 
   ngOnDestroy() {
@@ -204,10 +199,13 @@ addItemAsync(v) {
         console.log('returned data ... building form ... ');
         
         cfgField.key = cfgType + Math.floor(Math.random() * Math.floor(1000)).toString();
+
+        // cfgField.type = 'infoList';
+    ;
+        
         console.log(cfgField.key);
         console.log(cfgField);
-        // cfgField.type = 'infoList';
-        
+
         // this.options = {};
         // this.model = {};
         this.fields = [
@@ -219,6 +217,10 @@ addItemAsync(v) {
         this.model[cfgField.key].key = cfgField.key;
         this.model[cfgField.key].type = cfgType;
   });
+}
+
+clickEvent($event){
+    console.error($event);
 }
 
 addItem2Form() {

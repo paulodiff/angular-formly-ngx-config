@@ -146,7 +146,7 @@ export function emailValidatorMessage(err, field: FormlyFieldConfig) {
 // lifecycle - EXTENSION
 
 export function lifecycleFormlyExtension(field: FormlyFieldConfig) {
-  console.log("lifecycleFormlyExtension NOOP :", field.key);
+  // console.log("lifecycleFormlyExtension NOOP :", field.key);
   
   /*
     if (field.key === "reason") {
