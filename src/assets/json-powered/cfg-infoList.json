@@ -9,7 +9,7 @@
       "fieldGroup": [
           {
             "className": "col-sm-6",
-            "type": "cfg-input",
+            "type": "input",
             "key": "key",
             "templateOptions": {
               "label": "f-key",
@@ -19,7 +19,7 @@
             }
           },
           {
-            "type": "cfg-input",
+            "type": "input",
             "key": "type",
             "className": "col-sm-6",
             "templateOptions": {
@@ -34,7 +34,7 @@
             "fieldGroup": [
               {
                 "className": "col-sm-4",
-                "type": "rr-input-no-wrap",
+                "type": "input",
                 "key": "label",
                 "templateOptions": {
                   "label": "label",
@@ -42,7 +42,7 @@
                 }
               },
               {
-                "type": "rr-input-no-wrap",
+                "type": "input",
                 "key": "description",
                 "className": "col-sm-4",
                 "templateOptions": {
@@ -50,7 +50,7 @@
                 }
               },
               {
-                "type": "rr-checkbox",
+                "type": "checkbox",
                 "key": "required",
                 "className": "col-sm-4",
                 "templateOptions": {

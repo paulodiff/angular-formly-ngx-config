@@ -41,6 +41,7 @@ export class EditorComponent implements OnInit, OnDestroy {
         options: [
           { label: 'infoHeader', value: 'infoHeader' },
           { label: 'infoSimple', value: 'infoSimple' },
+          { label: 'infoList', value: 'infoList' },
           { label: 'input', value: 'input' },
         ],
       },
