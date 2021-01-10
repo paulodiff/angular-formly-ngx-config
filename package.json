@@ -15,6 +15,7 @@
     "@angular/router": "11.0.7",
     "@ngx-formly/bootstrap": "5.10.11",
     "@ngx-formly/core": "5.10.11",
+    "@types/lowdb": "^1.0.9",
     "@types/moment": "2.13.0",
     "bootstrap": "4.5.3",
     "bootstrap-italia": "1.4.1",
