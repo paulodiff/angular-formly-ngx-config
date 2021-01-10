@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { Validators, FormGroup } from '@angular/forms';
 import { AppService } from '../services/app.service';
+import { DbService } from '../services/db.service';
 import { sha256, sha224 } from 'js-sha256';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
@@ -58,21 +59,13 @@ export class EditorComponent implements OnInit, OnDestroy {
   constructor(
               private route: ActivatedRoute,
               private _appService: AppService,
-              firestore: AngularFirestore
+              private _dbService : DbService
             ) {
 
               console.log('Json:constructor');
-              this.items = firestore.collection('items').valueChanges();
-              console.log(this.items);
 
-              const data = {
-  name: 'Los Angeles 45646',
-  state: 'CA',
-  country: 'USA'
-};
-
-// Add a new document in collection "cities" with ID 'LA'
-const res =  firestore.collection('items').doc('LA').set(data);
+              _dbService.SetSomeonesName('ciao');
+              
 
 
   }

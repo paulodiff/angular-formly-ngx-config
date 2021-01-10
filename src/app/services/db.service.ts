@@ -13,7 +13,7 @@ export class DbService {
         this.db = await lowdb(adapter);
     }
 
-    private async SetSomeonesName(fullname: string): Promise<any> {
+    public async SetSomeonesName(fullname: string): Promise<any> {
         await this.db.set("user.fullname", fullname).write();
     }
 }
