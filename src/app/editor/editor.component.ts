@@ -40,7 +40,7 @@ export class EditorComponent implements OnInit, OnDestroy {
         label: 'Add dynamically field to form:',
         options: [
           { label: 'infoHeader', value: 'infoHeader' },
-
+          { label: 'infoSimple', value: 'infoSimple' },
           { label: 'infoList', value: 'infoList' }
         ],
       },

@@ -10,7 +10,7 @@ import { FieldArrayType } from '@ngx-formly/core';
       <h5>{{to.itemName}} n. {{ i + 1  }}</h5>
       <formly-group [field]="field">
 
-        <button class="btn btn-danger btn-lg btn-block" type="button" (click)="remove(i)">{{ to.removeText }} n. {{ i + 1 }}</button>
+        <button class="btn btn-danger btn-sm btn-block" type="button" (click)="remove(i)">{{ to.removeText }} n. {{ i + 1 }}</button>
     
       </formly-group>
       

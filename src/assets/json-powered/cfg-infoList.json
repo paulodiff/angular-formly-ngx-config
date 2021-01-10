@@ -32,7 +32,7 @@
             "key": "toRemove",
             "className": "col-sm-4",
             "templateOptions": {
-              "label": "select to remov"
+              "label": "select to remove"
             }
           },
 
@@ -41,7 +41,7 @@
             "key" : "templateOptions",
             "fieldGroup": [
               {
-                "className": "col-sm-4",
+                "className": "col-md-4",
                 "type": "input",
                 "key": "label",
                 "templateOptions": {
@@ -52,7 +52,7 @@
               {
                 "type": "input",
                 "key": "description",
-                "className": "col-sm-4",
+                "className": "col-md-4",
                 "templateOptions": {
                   "label": "description"
                 }
@@ -60,7 +60,7 @@
               {
                 "type": "checkbox",
                 "key": "required",
-                "className": "col-sm-4",
+                "className": "col-md-4",
                 "templateOptions": {
                   "label": "required"
                 }
@@ -86,7 +86,7 @@
             {
               "type": "input",
               "key": "value",
-              "className": "col-xl-6",
+              "className": "col-md-6",
               "templateOptions": {
                 "label": "Nome",
                 "required": true
@@ -96,7 +96,7 @@
             {
               "type": "input",
               "key": "label",
-              "className": "col-xl-6",
+              "className": "col-md-6",
               "templateOptions": {
                 "label": "Valore",
                 "required": true
