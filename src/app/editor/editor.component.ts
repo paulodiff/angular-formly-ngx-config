@@ -4,6 +4,8 @@ import { FormlyFormOptions, FormlyFieldConfig } from '@ngx-formly/core';
 import { Validators, FormGroup } from '@angular/forms';
 import { AppService } from '../services/app.service';
 import { sha256, sha224 } from 'js-sha256';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 
 
@@ -50,13 +52,27 @@ export class EditorComponent implements OnInit, OnDestroy {
       // candy: 'milky_way',
     };
 
+    items: Observable<any[]>;
+
 
   constructor(
               private route: ActivatedRoute,
-              private _appService: AppService
+              private _appService: AppService,
+              firestore: AngularFirestore
             ) {
 
               console.log('Json:constructor');
+              this.items = firestore.collection('items').valueChanges();
+              console.log(this.items);
+
+              const data = {
+  name: 'Los Angeles 45646',
+  state: 'CA',
+  country: 'USA'
+};
+
+// Add a new document in collection "cities" with ID 'LA'
+const res =  firestore.collection('items').doc('LA').set(data);
 
 
   }

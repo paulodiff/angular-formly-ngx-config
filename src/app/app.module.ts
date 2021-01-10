@@ -49,6 +49,9 @@ import { FormlyCfgInfoListFieldType } from './formly/CfgInfoList/formly-CfgInfoL
 import { SafeHtmlPipe} from './pipes/safeHTML.pipe';
 import * as FV from './services/validator';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 
 export function IpValidator(control: FormControl , field: FormlyFieldConfig): ValidationErrors {
@@ -83,6 +86,8 @@ export function IpValidatorMessage(err, field: FormlyFieldConfig) {
 @NgModule({
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
     ReactiveFormsModule,
     FormlyBootstrapModule,
 

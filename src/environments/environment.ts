@@ -17,7 +17,16 @@ export const environment = {
   apiLogin: 'http://localhost:8010/loginldap/LDAPlogin',
   apiLogout: 'http://localhost:8010/loginldap/LDAPlogout',
   apiSse: 'http://localhost:8010/sse',
-  apiSocket: 'http://localhost:8010'
+  apiSocket: 'http://localhost:8010',
+  firebase : {
+    apiKey: "AIzaSyBnsGCQraB7bzkSFsqeaf8j-g6y3ivnQ1c",
+    authDomain: "cloud-firestore-test-1c365.firebaseapp.com",
+    databaseURL: "https://cloud-firestore-test-1c365.firebaseio.com",
+    projectId: "cloud-firestore-test-1c365",
+    storageBucket: "cloud-firestore-test-1c365.appspot.com",
+    messagingSenderId: "903676611167",
+    appId: "1:903676611167:web:deacecd0e29217e886a9ea"
+  }
 };
 
 /*
