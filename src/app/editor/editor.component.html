@@ -5,6 +5,8 @@
   <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit If Valid</button>
 
     <button type="submit" class="btn btn-primary submit-button">Submit Always</button>
+
+
 </form>
 
 <div class="btn-group" role="group" aria-label="Basic example">
@@ -31,7 +33,9 @@ class="btn btn-primary submit-button">+ async</button>
     <button type="submit" class="btn btn-success submit-button">Add Field</button>
 </form>
 
-
+<button type="submit" 
+(click)="removeItem()"
+class="btn btn-warning submit-button">Remove selected Field</button>
 
 <div>
   <div *ngIf="error">

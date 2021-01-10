@@ -29,7 +29,10 @@ export class FormlyWrapperFormFieldCfgAll extends FieldWrapper {
     console.warn('model',m);
     console.warn('form',f);
     console.warn('fields',ff);
-    console.warn('field',fff);
+    console.warn('field1',fff);
+    console.warn('field2',fff.fields);
+    console.warn('field3',fff.fieldGroup);
+    console.warn('field4',fff.parentField);
     console.log(this.model);
     // https://stackblitz.com/edit/ngx-formly-ui-material-i9sndp
     this.model[k] = undefined;

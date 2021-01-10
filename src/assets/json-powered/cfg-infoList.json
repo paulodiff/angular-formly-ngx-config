@@ -1,5 +1,5 @@
 {
-      "fieldGroupClassName": "row",
+     
       "key" : "infoList",
       "wrappers" : ["form-field-cfg-all"],
       "templateOptions": {
@@ -25,6 +25,14 @@
             "templateOptions": {
               "description": "tipo della chiave",
               "label": "f-type"
+            }
+          },
+          {
+            "type": "checkbox",
+            "key": "toRemove",
+            "className": "col-sm-4",
+            "templateOptions": {
+              "label": "select to remov"
             }
           },
 
