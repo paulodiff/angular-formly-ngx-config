@@ -65,6 +65,8 @@ export class EditorComponent implements OnInit, OnDestroy {
               console.log('Json:constructor');
 
               _dbService.SetSomeonesName('ciao');
+
+              _dbService.GetAllData();
               
 
 
