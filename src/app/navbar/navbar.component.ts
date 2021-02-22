@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavBarComponent implements OnInit {
 
   loading: boolean;
-  
+  navbarOpen = false;
 
   constructor(
     // private loaderService: LoaderService

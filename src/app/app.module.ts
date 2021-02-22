@@ -21,6 +21,7 @@ import { DbService } from './services/db.service';
 import { LoaderService } from './services/loader.service';
 import { LoaderInterceptor } from './interceptors/loader-interceptor.service';
 import { LoaderComponent } from './loader/loader.component';
+import { NavBarComponent } from './navbar/navbar.component';
 
 
 
@@ -231,6 +232,7 @@ export function IpValidatorMessage(err, field: FormlyFieldConfig) {
     TabulatorTableComponent,
     LoginComponent,
     LoaderComponent,
+    NavBarComponent,
 
 
     // LoaderComponent,
