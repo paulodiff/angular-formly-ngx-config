@@ -13,7 +13,7 @@ export class DbService {
 
     constructor(){
         this.initDatabase();
-        /this.setDefaults();
+        this.setDefaults();
     }
 
     private async initDatabase() {
