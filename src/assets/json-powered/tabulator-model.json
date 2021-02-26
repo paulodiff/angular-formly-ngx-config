@@ -1,6 +1,6 @@
 [
-  {"title":"userId1", "field":"userId", "headerVertical":true},
-   {"title":"id22222222", "field":"id"},
+  {"title":"userName", "field":"username", "headerVertical":true},
+   {"title":"name", "field":"name"},
     {"title":"title", "field":"title"},
-     {"title":"body", "field":"body"}
+     {"title":"body", "field":"value"}
      ]
