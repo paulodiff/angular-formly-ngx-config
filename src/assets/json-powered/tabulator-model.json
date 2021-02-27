@@ -1,5 +1,5 @@
 [
-  {"title":"userName", "field":"username", "headerVertical":fa},
+  {"title":"userName", "field":"username", "headerVertical":false},
    {"title":"name", "field":"name"},
     {"title":"title", "field":"title"},
      {"title":"body", "field":"value"}
